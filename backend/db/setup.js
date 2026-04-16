@@ -7,7 +7,9 @@ const Database = require('better-sqlite3');
 const path = require('path');
 const fs = require('fs');
 
-const DB_PATH = path.join(__dirname, 'shopzone.db');
+const DB_PATH = process.env.VERCEL || process.env.NODE_ENV === 'production'
+    ? '/tmp/shopzone.db'
+    : path.join(__dirname, 'shopzone.db');
 
 function initDB() {
     const db = new Database(DB_PATH);
