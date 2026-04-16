@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#5b4137",
+                    "error": "#ffb4ab",
+                    "on-secondary-container": "#ffa17b",
+                    "tertiary-fixed": "#d1e4ff",
+                    "surface-container-highest": "#32353d",
+                    "on-secondary-fixed": "#370e00",
+                    "on-primary": "#5a1c00",
+                    "surface-container-high": "#272a32",
+                    "primary-container": "#ff5e00",
+                    "on-error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#ffb599",
+                    "outline": "#ab897d",
+                    "on-background": "#e1e2ec",
+                    "primary": "#ffb599",
+                    "surface-container": "#1d1f27",
+                    "secondary": "#ffb599",
+                    "on-primary-container": "#531900",
+                    "inverse-primary": "#a63b00",
+                    "tertiary": "#9fcaff",
+                    "tertiary-fixed-dim": "#9fcaff",
+                    "surface": "#10131a",
+                    "on-tertiary-fixed": "#001d36",
+                    "surface-bright": "#363941",
+                    "primary-fixed-dim": "#ffb599",
+                    "tertiary-container": "#0097fb",
+                    "background": "#10131a",
+                    "surface-dim": "#10131a",
+                    "secondary-container": "#802f07",
+                    "surface-container-lowest": "#0b0e15",
+                    "on-tertiary-fixed-variant": "#00497d",
+                    "inverse-on-surface": "#2d3038",
+                    "error-container": "#93000a",
+                    "on-secondary-fixed-variant": "#7d2d04",
+                    "primary-fixed": "#ffdbce",
+                    "on-tertiary-container": "#002d51",
+                    "on-secondary": "#5a1c00",
+                    "on-primary-fixed-variant": "#7f2b00",
+                    "surface-tint": "#ffb599",
+                    "surface-container-low": "#191b23",
+                    "secondary-fixed": "#ffdbce",
+                    "on-error": "#690005",
+                    "on-surface-variant": "#e4bfb1",
+                    "on-tertiary": "#003258",
+                    "on-surface": "#e1e2ec",
+                    "surface-variant": "#32353d",
+                    "on-primary-fixed": "#370e00",
+                    "inverse-surface": "#e1e2ec"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #10131a; color: #e1e2ec; }
+        .font-headline { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-panel { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        .ghost-border { border: 1px solid rgba(171, 137, 125, 0.15); }
+        .orange-glow { box-shadow: 0 0 25px rgba(255, 94, 0, 0.15); }
+        .hero-gradient { background: radial-gradient(circle at 70% 50%, rgba(255, 94, 0, 0.12) 0%, transparent 60%), linear-gradient(to right, #0b0e15 0%, #10131a 100%); }
+        .lume-dot::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background-color: #ff5e00; margin-right: 8px; box-shadow: 0 0 8px #ff5e00; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- Sticky NavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-950/60 backdrop-blur-md flex justify-between items-center px-8 py-4 max-w-full font-['Plus_Jakarta_Sans'] tracking-tight shadow-[0_20px_50px_rgba(255,94,0,0.1)]">
+<div class="flex items-center flex-1">
+<a class="text-2xl font-black italic tracking-tighter text-orange-500" href="#">ShopZone</a>
+</div>
+<div class="flex-1 max-w-xl mx-8 relative">
+<input class="w-full bg-surface-container-lowest border border-white/30 outline-none ring-0 focus:ring-0 focus:border-white/60 rounded-full py-2 px-6 text-sm placeholder-slate-500 transition-colors" placeholder="Search revolutionary tech..." type="text"/>
+<span class="material-symbols-outlined absolute right-4 top-2 text-slate-500">search</span>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-slate-400 hover:text-orange-500 transition-colors relative">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+<button class="bg-primary-container text-on-primary-container p-2.5 rounded-xl flex items-center gap-2 hover:scale-105 active:scale-95 transition-all relative">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="absolute -top-1 -right-1 bg-white text-primary-container text-[10px] font-bold w-5 h-5 flex items-center justify-center rounded-full border-2 border-slate-950">2</span>
+</button>
+<button class="text-slate-400 hover:text-slate-100 transition-colors">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="mt-20 pt-24 pb-32 hero-gradient overflow-hidden">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="z-10">
+<span class="inline-flex items-center bg-secondary-container/20 text-primary font-bold text-xs px-4 py-1.5 rounded-full lume-dot mb-6 uppercase tracking-widest">
+                    MEGA SALE
+                </span>
+<h1 class="text-6xl lg:text-7xl font-headline font-extrabold text-on-surface leading-[1.1] mb-8 tracking-tighter">
+                    Upgrade Your <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-container to-primary">Tech Game</span>
+</h1>
+<p class="text-xl text-on-surface-variant mb-12 max-w-lg leading-relaxed">
+                    Experience the next generation of high-performance peripherals and hardware. Engineered for precision, built for the elite.
+                </p>
+<div class="flex flex-wrap gap-6">
+<button class="px-10 py-4 bg-gradient-to-r from-primary-container to-primary text-on-primary-container font-bold rounded-xl shadow-[0_10px_30px_rgba(255,94,0,0.3)] hover:scale-105 transition-all">
+                        Shop Collection
+                    </button>
+<button class="px-10 py-4 ghost-border bg-surface-variant/40 backdrop-blur-md text-primary font-bold rounded-xl hover:bg-surface-variant/60 transition-all">
+                        View Deals
+                    </button>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-10 bg-primary/10 blur-[100px] rounded-full"></div>
+<div class="relative bg-surface-container-high/40 backdrop-blur-xl p-4 rounded-[2rem] ghost-border rotate-3 group-hover:rotate-0 transition-transform duration-700 shadow-2xl">
+<img alt="VR Headset" class="rounded-[1.5rem] w-full h-[450px] object-cover" data-alt="Futuristic high-end virtual reality headset floating against a dark tech background with neon orange accent lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXo6ZSYcTbMFjNO0Nz8Et6vQr1yUYaCsP7v_j0Dd74s890g7sA31MIbG5SQxbqWgqDwCIN25zb3R8g3eodSZJcxWYLxROES3WXMwwk3hMcHWOfDspvp6qoW6ap1iLEJaUMpLLM2L39sGDsrzlTB0Hirfd_rJY0ISyIjEzGDG9W5DvHB0eEeYRJrkRcfrOriE51PiB3gAE8nT0Hp4aMCGkcd71bbD3DldCrj2QPJomavUnq5Vog5tMP8_7I5chjEN8e9VL_tEZ_X0Fp"/>
+<div class="absolute -bottom-6 -left-6 bg-surface-container-highest p-6 rounded-2xl shadow-2xl ghost-border">
+<p class="text-xs text-primary font-bold uppercase tracking-widest mb-1">New Release</p>
+<p class="text-lg font-headline font-bold">X-Pulse VR Gen 2</p>
+<div class="flex items-center gap-2 mt-2">
+<span class="text-orange-500 font-bold">₹44,999</span>
+<span class="text-slate-500 line-through text-sm">₹52,000</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Tabs & Filter Bar -->
+<main class="max-w-7xl mx-auto px-8 -mt-12 relative z-20">
+<div class="bg-surface-container-low/80 backdrop-blur-xl p-8 rounded-3xl ghost-border shadow-2xl">
+<!-- Tabs -->
+<div class="flex items-center gap-10 border-b border-white/5 mb-10 overflow-x-auto pb-4 scrollbar-hide">
+<button class="text-orange-500 font-bold border-b-2 border-orange-500 pb-4 whitespace-nowrap">All Products</button>
+<button class="text-slate-400 hover:text-slate-100 font-medium pb-4 whitespace-nowrap transition-colors">Electronics</button>
+<button class="text-slate-400 hover:text-slate-100 font-medium pb-4 whitespace-nowrap transition-colors">Fashion</button>
+<button class="text-slate-400 hover:text-slate-100 font-medium pb-4 whitespace-nowrap transition-colors">Home Appliances</button>
+<button class="text-slate-400 hover:text-slate-100 font-medium pb-4 whitespace-nowrap transition-colors">Books</button>
+</div>
+<!-- Filter Chips -->
+<div class="flex flex-wrap items-center gap-8">
+<div class="flex items-center gap-3">
+<span class="text-sm font-bold text-slate-500 uppercase tracking-tighter">Price Range:</span>
+<div class="flex gap-2">
+<button class="px-4 py-1.5 rounded-full bg-secondary-container/20 border border-primary text-primary text-xs font-bold transition-all">All</button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container-high ghost-border text-slate-400 text-xs font-bold hover:bg-white/5 transition-all">Under ₹500</button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container-high ghost-border text-slate-400 text-xs font-bold hover:bg-white/5 transition-all">₹500 - ₹2000</button>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-sm font-bold text-slate-500 uppercase tracking-tighter">Rating:</span>
+<div class="flex gap-2">
+<button class="px-4 py-1.5 rounded-full bg-surface-container-high ghost-border text-slate-400 text-xs font-bold hover:bg-white/5 transition-all">4★+</button>
+<button class="px-4 py-1.5 rounded-full bg-surface-container-high ghost-border text-slate-400 text-xs font-bold hover:bg-white/5 transition-all">3★+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16 pb-32">
+<!-- Product Card 1 -->
+<div class="group bg-surface-container-low rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:orange-glow hover:bg-surface-container-high border border-transparent hover:border-primary/20">
+<div class="relative h-64 overflow-hidden">
+<div class="absolute top-4 left-4 z-10 flex gap-2">
+<span class="bg-primary-container text-on-primary-container text-[10px] font-black px-3 py-1 rounded-full uppercase">HOT</span>
+</div>
+<button class="absolute top-4 right-4 z-10 text-white/50 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+<img alt="GPU Component" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="High-performance custom gaming PC internal components with vibrant RGB orange and cyan lighting setup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa_K2LNtF7HPyIPhjq0aqJtebwP_HJRCDY5EX9A_hxeY9n-nIOXycgMo_WqbKZKBdNe6vd72dUUVXKjTtdXG9Iof0UCbkEVj7vN2bYT_tyZf4Hzo_DxllU9eSDPHQ5eHxQvzca5ZkJSrZUZX4Z0Ov71DutkJw7nfpzsdFQ3W20N54T4Oq8RnXVzvN0P-2RkAbdpIDN0Yo-qTDNv6h0j9CRpxzGgynubUPdvgSVcPXl_bUVcvhyzOKllRdVxm-HrPX13-wqafjHFTae"/>
+</div>
+<div class="p-6">
+<p class="text-xs text-slate-500 font-bold uppercase tracking-widest mb-1">Hardware</p>
+<h3 class="text-lg font-headline font-bold text-on-surface mb-4">RTX 5090 Kinetic Edition</h3>
+<p class="text-2xl font-bold text-orange-500 mb-6">₹1,59,999</p>
+<button class="w-full py-3 bg-gradient-to-r from-primary-container to-primary text-on-primary-container font-bold rounded-xl transition-transform active:scale-95">
+                        Add to Cart
+                    </button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group bg-surface-container-low rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:orange-glow hover:bg-surface-container-high border border-transparent hover:border-primary/20">
+<div class="relative h-64 overflow-hidden">
+<div class="absolute top-4 left-4 z-10 flex gap-2">
+<span class="bg-blue-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase">NEW</span>
+</div>
+<button class="absolute top-4 right-4 z-10 text-white/50 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+<img alt="Mechanical Keyboard" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Premium mechanical keyboard with orange backlit keys and custom keycaps on a dark minimalist desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8M7_X0Pz6SEYUPBdEl5NTwXiU6JtAYfQTh8JwfAY3N4-ykV4tfoIUalvYG52aV1hinbjGWE9ATDM-26E-w6AIfJDLyPbsoABjCuVGZyC0UOBxI3wBSEXn6xL7R8ZdVWpneGUNjgJeng714GvqbEm0ykLJj9JoP8XFnwvCXdeWKPCFT4Ijppu4FF4-If2Dh9Kz0OiAt7w8bTxkyYf1gr3VzmHPkYUwAKrgVhjHnjLR9sN9Jlv4NVfTONPbkplVtK280vOTkeubIbao"/>
+</div>
+<div class="p-6">
+<p class="text-xs text-slate-500 font-bold uppercase tracking-widest mb-1">Peripherals</p>
+<h3 class="text-lg font-headline font-bold text-on-surface mb-4">Ghost Keys Pro TKL</h3>
+<p class="text-2xl font-bold text-orange-500 mb-6">₹12,499</p>
+<button class="w-full py-3 bg-gradient-to-r from-primary-container to-primary text-on-primary-container font-bold rounded-xl transition-transform active:scale-95">
+                        Add to Cart
+                    </button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group bg-surface-container-low rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:orange-glow hover:bg-surface-container-high border border-transparent hover:border-primary/20">
+<div class="relative h-64 overflow-hidden">
+<div class="absolute top-4 left-4 z-10 flex gap-2">
+<span class="bg-red-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase">SALE</span>
+</div>
+<button class="absolute top-4 right-4 z-10 text-white/50 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+<img alt="Headphones" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Sleek wireless noise-cancelling headphones in matte black with subtle orange highlights on a floating pedestal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0Md_bVjHt86duNFU-khHRk_lY-bOv3wkrv7t8NU0CKyjmd_qcSEzlT0UrK7Oy0XG1tYHtIiR4wvrH-PTeLygCSGwu7nfNZkT6c-gnEFemexGZbpkIvR3Pge5OgfbWhYUQNB-m0QLS-gJCyDwoyfNtxZ6VyGZ4rB1By3ACYwW40FeN5YB4rAYPbMlcWzoHwD-d2CGRL3BaJACILpZgk9j37RQ3mCg2hKuOPC0Ddvlj1OrwL1GtCzjR1yKTvGr1ZCSLJkLi6ITxhCMG"/>
+</div>
+<div class="p-6">
+<p class="text-xs text-slate-500 font-bold uppercase tracking-widest mb-1">Audio</p>
+<h3 class="text-lg font-headline font-bold text-on-surface mb-4">Sonic Vibe X-500</h3>
+<p class="text-2xl font-bold text-orange-500 mb-6">₹24,999</p>
+<button class="w-full py-3 bg-gradient-to-r from-primary-container to-primary text-on-primary-container font-bold rounded-xl transition-transform active:scale-95">
+                        Add to Cart
+                    </button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group bg-surface-container-low rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:orange-glow hover:bg-surface-container-high border border-transparent hover:border-primary/20">
+<div class="relative h-64 overflow-hidden">
+<div class="absolute top-4 left-4 z-10 flex gap-2">
+<span class="bg-primary-container text-on-primary-container text-[10px] font-black px-3 py-1 rounded-full uppercase">HOT</span>
+</div>
+<button class="absolute top-4 right-4 z-10 text-white/50 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+<img alt="Gaming Mouse" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Ergonomic wireless gaming mouse with honeycomb design and internal orange lighting on a carbon fiber surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDX6KyGcbgZtVJPq3h0DCypubapsOyskfiEkGfv9JPcjDos52ZWysz3wpP6Nh-uuvI99KjSkeGW5cdfazeepudzKQUc1JSukXMQlMVJ3Xq29ZIGLx8WYyz0uqLZJXp7xkeHDBDKsGPkJ3qkKH1j-62Fzy9JJaY8yTGPJ6yqQS62zAyn35O8iiQq1ZoSsrJcMCO0AcjJVWEAmbMQb10NJ2AUk-XCM-rGo-t39-t7LkqSMnY5kVnjoZt2NVO_TBP1AJpB5WPE8TzTlkP_"/>
+</div>
+<div class="p-6">
+<p class="text-xs text-slate-500 font-bold uppercase tracking-widest mb-1">Peripherals</p>
+<h3 class="text-lg font-headline font-bold text-on-surface mb-4">Glide-X Ultra Wireless</h3>
+<p class="text-2xl font-bold text-orange-500 mb-6">₹8,999</p>
+<button class="w-full py-3 bg-gradient-to-r from-primary-container to-primary text-on-primary-container font-bold rounded-xl transition-transform active:scale-95">
+                        Add to Cart
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-950 border-t border-white/5 w-full flex flex-col md:flex-row justify-between items-center px-12 py-10 gap-6">
+<div class="flex flex-col gap-2">
+<h2 class="text-lg font-bold text-slate-100">ShopZone</h2>
+<p class="text-xs text-slate-500 font-['Inter']">Precision engineered commerce for the digital era.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-10 font-['Inter'] text-sm">
+<a class="text-slate-500 hover:text-orange-500 transition-colors" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-orange-500 transition-colors" href="#">Terms of Service</a>
+<a class="text-slate-500 hover:text-orange-500 transition-colors" href="#">Shipping Info</a>
+<a class="text-slate-500 hover:text-orange-500 transition-colors" href="#">Contact</a>
+</div>
+<div class="text-slate-500 text-sm font-['Inter']">
+            © 2024 ShopZone Kinetic. All rights reserved.
+        </div>
+</footer>
+</body></html>
