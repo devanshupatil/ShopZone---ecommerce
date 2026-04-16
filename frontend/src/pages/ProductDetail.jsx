@@ -118,7 +118,7 @@ export default function ProductDetail() {
             <main className="max-w-7xl mx-auto px-8 pb-16">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                     {/* LEFT: Product Image */}
-                    <div className="sticky top-[80px]">
+                    <div className="lg:sticky lg:top-[80px] z-10">
                         <div className="ghost-border orange-glow glass-panel rounded-3xl flex items-center justify-center h-[420px] mb-4 relative overflow-hidden">
                             <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent pointer-events-none"></div>
                             {product.image ? (
